@@ -50,7 +50,7 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass shadow-lg py-3"
+          ? "bg-background border-b border-accent py-3"
           : "bg-transparent py-5"
       }`}
     >
@@ -59,9 +59,9 @@ export default function Navbar() {
           <motion.a
             href="#hero"
             onClick={(e) => handleClick(e, "#hero")}
-            className="text-2xl font-bold gradient-text"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            className="text-2xl font-bold text-foreground"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
           >
             DE
           </motion.a>
@@ -72,17 +72,15 @@ export default function Navbar() {
                 key={item.name}
                 href={item.href}
                 onClick={(e) => handleClick(e, item.href)}
-                className={`text-sm font-medium transition-colors duration-200 relative ${
-                  activeSection === item.href.substring(1)
-                    ? "text-purple-400"
-                    : "text-gray-300 hover:text-white"
+                className={`text-sm font-medium text-foreground/80 hover:text-foreground transition-colors duration-200 relative ${
+                  activeSection === item.href.substring(1) ? "text-foreground" : ""
                 }`}
               >
                 {item.name}
                 {activeSection === item.href.substring(1) && (
                   <motion.div
                     layoutId="activeSection"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-purple-400"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-accent"
                     initial={false}
                     transition={{ type: "spring", stiffness: 380, damping: 30 }}
                   />

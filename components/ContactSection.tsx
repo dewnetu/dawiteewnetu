@@ -22,10 +22,10 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get In <span className="gradient-text">Touch</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Get In Touch
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-foreground/60 text-lg">
             Let's connect and discuss opportunities
           </p>
         </motion.div>
@@ -34,21 +34,21 @@ export default function ContactSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="glass rounded-2xl p-8 md:p-12"
+          className="glass rounded-2xl p-8 md:p-12 border border-accent"
         >
           <div className="space-y-6">
             <motion.a
               href="mailto:dawiteewnetu@gmail.com"
-              className="flex items-center gap-4 p-4 glass rounded-lg hover:bg-white/10 transition-all duration-300 group"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="flex items-center gap-4 p-4 glass rounded-lg border border-accent hover:border-accent-hover transition-[border-color] duration-200 group"
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
             >
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
-                <EnvelopeIcon className="w-6 h-6 text-white" />
+              <div className="p-3 bg-accent border border-accent rounded-lg">
+                <EnvelopeIcon className="w-6 h-6 text-foreground" />
               </div>
               <div>
-                <p className="text-gray-400 text-sm">Email</p>
-                <p className="text-white font-semibold group-hover:text-purple-400 transition-colors">
+                <p className="text-foreground/60 text-sm">Email</p>
+                <p className="text-foreground font-semibold">
                   dawiteewnetu@gmail.com
                 </p>
               </div>
@@ -56,16 +56,16 @@ export default function ContactSection() {
 
             <motion.a
               href="tel:+12408728221"
-              className="flex items-center gap-4 p-4 glass rounded-lg hover:bg-white/10 transition-all duration-300 group"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="flex items-center gap-4 p-4 glass rounded-lg border border-accent hover:border-accent-hover transition-[border-color] duration-200 group"
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
             >
-              <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
-                <PhoneIcon className="w-6 h-6 text-white" />
+              <div className="p-3 bg-accent border border-accent rounded-lg">
+                <PhoneIcon className="w-6 h-6 text-foreground" />
               </div>
               <div>
-                <p className="text-gray-400 text-sm">Phone</p>
-                <p className="text-white font-semibold group-hover:text-purple-400 transition-colors">
+                <p className="text-foreground/60 text-sm">Phone</p>
+                <p className="text-foreground font-semibold">
                   (240) 872-8221
                 </p>
               </div>
@@ -75,9 +75,9 @@ export default function ContactSection() {
               href="https://linkedin.com/in/dawiteewnetu"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-4 p-4 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-300 text-white font-semibold"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="flex items-center justify-center gap-4 p-4 bg-accent border border-accent rounded-lg hover:border-accent-hover transition-[border-color] duration-200 text-foreground font-semibold"
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
             >
               <svg
                 className="w-6 h-6"

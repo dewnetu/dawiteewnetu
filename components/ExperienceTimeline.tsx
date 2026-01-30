@@ -82,17 +82,17 @@ export default function ExperienceTimeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Experience</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Experience
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-foreground/60 text-lg">
             My professional journey in software engineering
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-blue-500 hidden md:block" />
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-accent hidden md:block" />
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
@@ -104,30 +104,30 @@ export default function ExperienceTimeline() {
                 className="relative pl-0 md:pl-20"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-6 top-6 w-4 h-4 bg-purple-500 rounded-full border-4 border-gray-900 hidden md:block" />
+                <div className="absolute left-6 top-6 w-4 h-4 bg-accent rounded-full border-4 border-background hidden md:block" />
 
-                <div className="glass rounded-xl p-6 md:p-8 hover:bg-white/10 transition-all duration-300">
+                <div className="glass rounded-xl p-6 md:p-8 border border-accent hover:border-accent-hover transition-[border-color] duration-200">
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="p-3 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg">
-                      <BriefcaseIcon className="w-6 h-6 text-white" />
+                    <div className="p-3 bg-accent border border-accent rounded-lg">
+                      <BriefcaseIcon className="w-6 h-6 text-foreground" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-white mb-1">
+                      <h3 className="text-2xl font-bold text-foreground mb-1">
                         {exp.role}
                       </h3>
-                      <p className="text-xl text-purple-400 font-semibold mb-2">
+                      <p className="text-xl font-semibold text-foreground/90 mb-2">
                         {exp.company}
                       </p>
-                      <p className="text-gray-400 text-sm">{exp.period}</p>
+                      <p className="text-foreground/60 text-sm">{exp.period}</p>
                     </div>
                   </div>
                   <ul className="space-y-2 ml-12">
                     {exp.description.map((item, idx) => (
                       <li
                         key={idx}
-                        className="text-gray-300 flex items-start gap-2"
+                        className="text-foreground/80 flex items-start gap-2"
                       >
-                        <span className="text-purple-400 mt-1">▹</span>
+                        <span className="text-accent mt-1">▹</span>
                         <span>{item}</span>
                       </li>
                     ))}

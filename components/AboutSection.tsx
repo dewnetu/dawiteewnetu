@@ -20,23 +20,23 @@ export default function AboutSection() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            <span className="gradient-text">About</span> Me
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center text-foreground">
+            About Me
           </h2>
           
-          <div className="glass rounded-2xl p-8 md:p-12 shadow-xl">
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+          <div className="glass rounded-2xl p-8 md:p-12 border border-accent hover:border-accent-hover transition-[border-color] duration-200">
+            <p className="text-lg md:text-xl text-foreground/90 leading-relaxed">
               Dynamic and dedicated Software Developer with over{" "}
-              <span className="text-purple-400 font-semibold">8 years</span> of
+              <span className="font-semibold text-foreground">8 years</span> of
               experience and a passion for creating innovative solutions. Proven
               success in web application development with strong skills in{" "}
-              <span className="text-blue-400">Java</span>,{" "}
-              <span className="text-blue-400">C#</span>,{" "}
-              <span className="text-blue-400">Python</span>, and modern cloud
+              <span className="font-medium text-foreground">Java</span>,{" "}
+              <span className="font-medium text-foreground">C#</span>,{" "}
+              <span className="font-medium text-foreground">Python</span>, and modern cloud
               technologies. Experienced in building business logic layers,
               implementing scalable solutions, and transitioning into machine
               learning engineering. Seeking a challenging{" "}
-              <span className="text-purple-400 font-semibold">
+              <span className="font-semibold text-foreground">
                 Senior Software Engineer
               </span>{" "}
               role where cloud, AI, and distributed systems intersect.

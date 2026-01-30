@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover: "rgba(38, 38, 38, 0.75)",
+        },
       },
       animation: {
         "fade-in": "fadeIn 0.6s ease-in-out",

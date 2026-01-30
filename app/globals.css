@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --background: #0a0a0f;
-  --foreground: #e0e0e8;
+  --background: #0A0A0A;
+  --foreground: #EDEDED;
+  --accent: #262626;
 }
 
 * {
@@ -33,15 +34,11 @@ body {
   }
   
   .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--background);
+    border: 1px solid var(--accent);
   }
   
-  .gradient-text {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .glass-hover:hover {
+    border-color: rgba(38, 38, 38, 0.8);
   }
 }

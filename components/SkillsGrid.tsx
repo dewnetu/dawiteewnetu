@@ -8,32 +8,26 @@ const skillCategories = [
   {
     title: "Cloud & DevOps",
     skills: ["AWS", "Kubernetes", "Docker", "Helm", "Jenkins", "CI/CD", "GDCH", "EKS"],
-    color: "from-blue-500 to-cyan-500",
   },
   {
     title: "Backend",
     skills: ["Java", "Spring Boot", "Python", "Flask", "Node.js", "REST APIs"],
-    color: "from-purple-500 to-pink-500",
   },
   {
     title: "Frontend",
     skills: ["React", "Angular", "TypeScript", "JavaScript", "HTML", "CSS"],
-    color: "from-green-500 to-emerald-500",
   },
   {
     title: "Databases",
     skills: ["SQL", "PostgreSQL", "Cassandra", "Elasticsearch", "NoSQL"],
-    color: "from-orange-500 to-red-500",
   },
   {
     title: "AI / ML",
     skills: ["TensorFlow", "PyTorch", "Machine Learning Model Training"],
-    color: "from-indigo-500 to-purple-500",
   },
   {
     title: "Tools",
     skills: ["Git", "Jira", "Splunk", "Linux (CentOS)"],
-    color: "from-gray-500 to-slate-500",
   },
 ];
 
@@ -54,10 +48,10 @@ export default function SkillsGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">Skills</span> & Technologies
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            Skills & Technologies
           </h2>
-          <p className="text-gray-400 text-lg">
+          <p className="text-foreground/60 text-lg">
             Technologies I work with to build scalable solutions
           </p>
         </motion.div>
@@ -71,18 +65,16 @@ export default function SkillsGrid() {
                 isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
               }
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glass rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+              className="glass rounded-xl p-6 border border-accent hover:border-accent-hover transition-[border-color] duration-200"
             >
-              <h3
-                className={`text-xl font-bold mb-4 bg-gradient-to-r ${category.color} bg-clip-text text-transparent`}
-              >
+              <h3 className="text-xl font-bold mb-4 text-foreground">
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill) => (
                   <span
                     key={skill}
-                    className="px-3 py-1 bg-white/5 rounded-full text-sm text-gray-300 border border-white/10"
+                    className="px-3 py-1 rounded-full text-sm text-foreground/80 border border-accent"
                   >
                     {skill}
                   </span>
